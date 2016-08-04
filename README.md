@@ -49,7 +49,7 @@ The Network in Network was used as provided in the [Caffe model zoo](https://gis
 
 We evaluate our RFNN on multiple subsets of MNIST as done in [2].
 
-We show an RFNN can be as stable as Scattering when number of training samples is limited while it outperforms plain CNNs by large margins.
+We show an RFNN can be as stable as Scattering when the number of training samples is limited while it outperforms plain CNNs by large margins.
 
 ![MNIST](./imgs/mnist.png)
 
@@ -80,7 +80,7 @@ follow instructions in .txt file
 ```
 Train model (before execution change "/path/to/" everywhere)
 ```
-$ /path/to/RFNN/caffe-rfnn/build/caffe train -solver=solver_RFNN_Small_ILSVRC2012_train_val_10class.prototxt
+$ /path/to/RFNN/caffe-rfnn/build/tools/caffe train -solver=solver_RFNN_Small_ILSVRC2012_train_val_10class.prototxt
 ```
 Full Imagenet pre-trained RFNN that achieves 55.92% top-1 accuracy corresponding to "RFNN_BN_ILSVRC2012_train_val.prototxt" model definition and "solver_RFNN_BN_ILSVRC2012_train_val.prototxt" solver file can be downloaded here:
 ```
@@ -133,7 +133,7 @@ $ bash get_data.sh
 ```
 Train an RFNN on MNIST in Theano
 ```
-$ python /path/to/RFNN/theano-rfnn/run_rfnn.py -epochs 100 -ntrain 60000
+$ python /path/to/RFNN/theano-rfnn/run_rfnn.py --epochs 100 --ntrain 60000
 ```
 ntrain determines the number of randomly chosen samples from MNIST, to reproduce figure 5 from paper.
 
