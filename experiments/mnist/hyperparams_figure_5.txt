@@ -1,0 +1,18 @@
+Train figure 5 from "Structured Receptive Fiels in CNNs" paper
+
+60000 Training samples: 
+python ./Theano/run_rfnn.py --epochs 100 --ntrain 60000
+40000 Training samples: 
+python ./Theano/run_rfnn.py --epochs 100 --ntrain 40000
+20000 Training samples: 
+python ./Theano/run_rfnn.py --epochs 100 --ntrain 20000
+10000 Training samples: 
+python ./Theano/run_rfnn.py --epochs 100 --ntrain 10000
+5000 Training samples: 
+python ./Theano/run_rfnn.py --epochs 150 --ntrain 5000
+2000 Training samples: 
+python ./Theano/run_rfnn.py --epochs 200 --ntrain 2000
+1000 Training samples: 
+python ./Theano/run_rfnn.py --epochs 300 --ntrain 1000
+300 Training samples: 
+python ./Theano/run_rfnn.py --epochs 1000 --ntrain 300

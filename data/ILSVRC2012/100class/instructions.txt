@@ -1,0 +1,6 @@
+Preprocess data with: 
+
+caffe_rfnn/examples/imagenet/create_imagenet.sh
+caffe_rfnn/examples/imagenet/make_imagenet.sh
+
+File list and labels as needed for scripts is provided in this folder

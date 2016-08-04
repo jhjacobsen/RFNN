@@ -1,0 +1,7 @@
+# You can download selected and preprocessed dataset via the following links. Wget does not seem to work with google drive, so# it has to be done manually for now. Will update once better hosting is available.
+'https://drive.google.com/uc?export=download&id=0BwvW2DIpN6dOUThlN0VEbldSV0k' -O imagenet_mean_10biggest.binaryproto
+'https://drive.google.com/uc?export=download&id=0BwvW2DIpN6dOSjBORk9udlZodlE' -O ilsvrc12_val_lmdb_10biggest.tar.gz
+'https://drive.google.com/uc?export=download&id=0BwvW2DIpN6dOWUxRMW1HV2pwRFk' -O ilsvrc12_train_lmdb_10biggest.tar.gz
+# Then unpack with
+tar -zxvf ilsvrc12_val_lmdb_10biggest.tar.gz
+tar -zxvf ilsvrc12_train_lmdb_10biggest.tar.gz

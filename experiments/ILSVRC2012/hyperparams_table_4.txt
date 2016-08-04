@@ -1,0 +1,12 @@
+"""
+Train slightly better version of table 4 from "Structured Receptive Fiels in CNNs" paper with the following solver definitions
+"""
+ILSVRC2012-10class:
+/path/to/RFNN/caffe-rfnn/models/rfnn/solver_RFNN_BN_ILSVRC2012_BN_10class.prototxt
+ILSVRC2012-100class:
+/path/to/RFNN/caffe-rfnn/models/rfnn/solver_RFNN_BN_ILSVRC2012_BN_100class.prototxt
+ILSVRC2012-1000class:
+/path/to/RFNN/caffe-rfnn/models/rfnn/solver_RFNN_BN_ILSVRC2012_BN_1000class.prototxt
+
+Pretrained models for all subsets can be found here:
+
