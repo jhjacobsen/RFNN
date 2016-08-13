@@ -24,7 +24,6 @@ def floatX(X):
     theano.config.floatX='float32'
 
 def init_basis_hermite(sigma,bases):
-    sigma=1
     filterExtent = 3*sigma
     x = np.arange(-filterExtent, filterExtent+1, dtype=np.float)
     imSize = filterExtent*2+1
@@ -37,7 +36,7 @@ def init_basis_hermite(sigma,bases):
     g1 = sigma * -(x/ np.square(sigma)) * g
     g2 = np.square(sigma) * ( (np.square(x)-np.power(sigma,2)) / np.power(sigma,4)) * g
     g3 = np.power(sigma,3) * -( (np.power(x,3) - 3 * x * np.square(sigma)) / np.power(sigma,6)) * g
-    g4 = np.power(sigma,4) * ( ( (np.power(x,4) - 6 *  np.square(x) * np.square(sigma) + 3 * np.power(sigma,4)) / np.power(sigma,8) ) / np.power(sigma,6)) * g
+    g4 = np.power(sigma,4) * ( ( (np.power(x,4) - 6 *  np.square(x) * np.square(sigma) + 3 * np.power(sigma,4)) / np.power(sigma,8) ) ) * g
     gauss0x = filters.convolve1d(impulse, g, axis=1)
     gauss0y = filters.convolve1d(impulse, g, axis=0)
     gauss1x = filters.convolve1d(impulse, g1, axis=1)

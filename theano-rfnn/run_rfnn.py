@@ -44,7 +44,6 @@ def model(X, w_L1, w_L2, w_L3, w_L4, p_drop_conv, p_drop_hidden):
     l3b = rectify(cuconv(l2,w_L3, border_mode='full'))
     l3 = cupool(l3b, (3,3), stride=(2, 2))
     l3 = crossnormalizer(l3)
-    l3 = dropout(l3, p_drop_conv)
 
     l4 = T.flatten(l3, outdim=2)
 
@@ -101,7 +100,7 @@ w_L4 = init_weights((3136, 10))
 # Set up function
 #-------------------------
 
-noise_l1, noise_l2, noise_l3, noise_py_x = model(X, w_L1, w_L2, w_L3, w_L4, 0.2, 0.5)
+noise_l1, noise_l2, noise_l3, noise_py_x = model(X, w_L1, w_L2, w_L3, w_L4, 0.2, 0.7)
 l1, l2, l3, py_x = model(X, w_L1, w_L2, w_L3, w_L4, 0., 0.)
 y_x = T.argmax(py_x, axis=1)
 
@@ -117,7 +116,7 @@ predict = theano.function(inputs=[X], outputs=y_x, allow_input_downcast=True)
 #-------------------------
 
 d={}
-batch_size = 64
+batch_size = 25
 epochs = args.epochs[0]
 epoch_count = np.array(args.epochs).astype(int)
 
