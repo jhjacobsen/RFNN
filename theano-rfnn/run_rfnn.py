@@ -48,7 +48,7 @@ def model(X, w_L1, w_L2, w_L3, w_L4, p_drop_conv, p_drop_hidden):
     l4 = T.flatten(l3, outdim=2)
 
     pyx = dropout(l4, p_drop_hidden)
-    pyx = softmax(T.dot(l4, w_L4))
+    pyx = softmax(T.dot(pyx, w_L4))
     return l1, l2, l3, pyx
 
 #--------------------------
