@@ -23,8 +23,8 @@ def floatX(X):
     return np.asarray(X, dtype=theano.config.floatX)
     theano.config.floatX='float32'
 
-def init_basis_hermite(sigma,bases):
-    filterExtent = 3*sigma
+def init_basis_hermite(sigma,bases,extent):
+    filterExtent = extent
     x = np.arange(-filterExtent, filterExtent+1, dtype=np.float)
     imSize = filterExtent*2+1
     impulse = np.zeros( (np.int(imSize), np.int(imSize)) )

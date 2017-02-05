@@ -83,9 +83,9 @@ sigma_L2 = 1
 bases_L3 = 6
 sigma_L3 = 1
 
-basis_L1 = init_basis_hermite(sigma_L1,bases_L1)
-basis_L2 = init_basis_hermite(sigma_L2,bases_L2)
-basis_L3 = init_basis_hermite(sigma_L3,bases_L3)
+basis_L1 = init_basis_hermite(sigma_L1,bases_L1,5)
+basis_L2 = init_basis_hermite(sigma_L2,bases_L2,3)
+basis_L3 = init_basis_hermite(sigma_L3,bases_L3,3)
 
 alphas_L1 = init_alphas(64,1,bases_L1)
 alphas_L2 = init_alphas(64,64,bases_L2)
@@ -123,7 +123,7 @@ epoch_count = np.array(args.epochs).astype(int)
 bar = Bar(' Training RFNN on MNIST - Epoch ', max=epoch_count)
 for i in range(epoch_count):
     lr= 5.0 *(epochs-i)/(epochs)
-    for start, end in zip(range(0, len(trX), batch_size-1), range(batch_size, len(trX)+1, batch_size)):
+    for start, end in zip(range(0, len(trX)+1, batch_size), range(batch_size, len(trX)+1, batch_size)):
         cost = train(trX[start:end], trY[start:end], lr)
     y_x=predict(teX)
     bar.next()
