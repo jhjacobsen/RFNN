@@ -137,9 +137,6 @@ $ python /path/to/RFNN/theano-rfnn/run_rfnn.py --epochs 100 --ntrain 60000
 ```
 ntrain determines the number of randomly chosen samples from MNIST, to reproduce figure 5 from paper.
 
-
-### To follow: Keras
-
 ## Cite
 If you use our code or ideas from our method, please be so kind to cite:
 ```bibtex
