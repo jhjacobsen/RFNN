@@ -2,7 +2,7 @@
 
 
 
-##Structured Receptive Fields in CNNs
+## Structured Receptive Fields in CNNs
 
 Structured receptive field networks (RFNNs) are CNNs whose filters are learned from a low-order symmetric basis, rather than from mere pixel values as done in vanilla CNNs. RFNNs can operate on restricted, low-order feature spaces that allow them to outperform classical CNNs by large margins when data is scarce.
 
